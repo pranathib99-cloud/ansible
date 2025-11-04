@@ -1,0 +1,12 @@
+- name: insatll and start nginx
+  hosts: frontend
+  -tasks:
+    - name: install mginx
+      ansible.buldtin.yum:
+        name: nginx
+        state: present
+    - name: start nginx service
+      ansible.builtin.service:  
+        name: nginx
+        state: started
+        enabled: yes
