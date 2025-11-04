@@ -1,0 +1,6 @@
+-name: ping server
+hosts: frontend # which server you want to concect
+# list of tasks/collection/modules
+tasks:
+  - name: ping 
+  ansible.builtin.ping: # module name
