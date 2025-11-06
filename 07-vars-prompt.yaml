@@ -3,8 +3,8 @@
   hosts: localhost 
   connection: local
 
-  vars_prompt:
-  - name: username
+  vars_prompt:  #prompting for variable values , will ask while executing the playbook ,
+  - name: username #username variable ,run time prompt password
     prompt: what is tour username
     private: false
 

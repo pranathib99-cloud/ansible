@@ -13,3 +13,11 @@
   - name: print the variable preference
     ansible.builtin.debug:
       msg: "NAME is: {{ NAME }}"
+
+  #preference order: to set variable values or override
+  #args or command line
+  #prompt
+  #file
+  #prompt
+  #play level
+  #inventory
