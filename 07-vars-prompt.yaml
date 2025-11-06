@@ -3,7 +3,7 @@
   hosts: localhost 
   connection: local
 
-  vars_promt:
+  vars_prompt:
   - name: username
     prompt: what is tour username
     private: flase
