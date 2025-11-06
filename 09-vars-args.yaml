@@ -4,4 +4,7 @@
   tasks:
   - name: print the course info
     ansible.builtin.debug:
-     msg: "Course Name is: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ trainer }}" 
+     msg: "Course Name is: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ Trainer }}" 
+
+     # Pass variables via --extra-vars or -e option
+      # Example: ansible-playbook 09-vars-args.yaml -e "COURSE=Ansible DURATION=10HRS Trainer=pranathi"
