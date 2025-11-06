@@ -1,0 +1,9 @@
+- name: gather facts
+  hosts: localhost
+  connection: local 
+  # gather_facts is true by default , it collects system information and stores in ansible_facts variable
+
+  tasks:
+  - name: facts
+    ansible.builtin.debug:
+     msg: "{{ ansible_facts }}"
