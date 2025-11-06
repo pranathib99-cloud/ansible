@@ -6,7 +6,7 @@
   vars_prompt:
   - name: username
     prompt: what is tour username
-    private: flase
+    private: false
 
   - name: password
     prompt: What is your password?
