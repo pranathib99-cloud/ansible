@@ -1,0 +1,11 @@
+- name: install packages using loop
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: print package  
+    ansible.builtin.debug:
+     name: {{ item }}
+     state: present             #item is a default variable in loops
+    loop:
+     - nginx   
+     - mysql
