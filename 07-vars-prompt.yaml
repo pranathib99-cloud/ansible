@@ -6,6 +6,6 @@
     prompt: what is tour username
     private: flase
   tasks:
-    - name: print the username
-      ansible.builtin.debug:
-        msg: "hello, Username is: {{ username }}"
+  - name: print the username
+    ansible.builtin.debug:
+     msg: "hello, Username is: {{ username }}"
