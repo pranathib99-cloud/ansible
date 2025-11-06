@@ -2,7 +2,7 @@
   hosts: localhost
   connection: local
   vars:
-    number: 5
-    ansible.builtin.debug:
-       msg: "given number is {{ number }} less than 10"
+   number: 5
+   ansible.builtin.debug:
+     msg: "given number is {{ number }} less than 10"
   when: number < 10 
