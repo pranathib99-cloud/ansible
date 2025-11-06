@@ -1,0 +1,11 @@
+-name: multi variable playbook
+hosts: localhost
+conection: local
+vars:
+  COURSE: ansible
+  DURATION: 10hrs
+  TRANNER: pranathi
+-tasks:
+name: printh the course 
+ansible.builtin.debug:
+ msg: "course name is  "course: {{ COURSE }},duration: {{ DURATION }},tranner: {{ TRANNER }}""
