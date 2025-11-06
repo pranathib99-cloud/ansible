@@ -1,5 +1,5 @@
-- name: multi variable playbook
- hosts: localhost
+- name: play level variables 
+ hosts: local
  conection: local
  vars:
    COURSE: ansible
@@ -8,4 +8,5 @@
  -tasks:
    name: printh the course 
    ansible.builtin.debug:
-     msg: "course name is  "course: {{ COURSE }},duration: {{ DURATION }},tranner: {{ TRANNER }}""
+     msg: "course name : {{ COURSE }},duration: {{ DURATION }},tranner: {{ TRANNER }}"
+
