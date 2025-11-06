@@ -1,0 +1,12 @@
+- name: loops
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: print names
+    ansible.builtin.debug:
+     msg: "hello {{ item }}"               #item is a default variable in loops
+    loop:
+     - pranathi
+     - sivakumar
+     - rajesh
+     - anita
