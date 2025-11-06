@@ -2,14 +2,14 @@
   hosts: localhost
   connection: local
   tasks:
-   - name: install nginx if RedHat
-      ansible.builtin.dnf:   #dnf module is used for RedHat based systems
-        name: nginx
-        state: present
-      when: ansible_os_family == "RedHat"  #ansible_os_family is a gathered fact when refeerencing facts use ansible_ prefix
+  - name: install nginx if RedHat
+    ansible.builtin.dnf:   #dnf module is used for RedHat based systems
+     name: nginx
+     state: present
+    when: ansible_os_family == "RedHat"  #ansible_os_family is a gathered fact when refeerencing facts use ansible_ prefix
 
-      - name: install nginx if RedHat
-         ansible.builtin.apt:   #apt module is used for Debian based systems
-          name: nginx
-          state: present
-        when: ansible_os_family == "Debian"  #ansible_os_family is a gathered fact when refeerencing facts use ansible_ prefix
+  - name: install nginx if RedHat
+    ansible.builtin.apt:   #apt module is used for Debian based systems
+     name: nginx
+     state: present
+    when: ansible_os_family == "Debian"  #ansible_os_family is a gathered fact when refeerencing facts use ansible_ prefix
