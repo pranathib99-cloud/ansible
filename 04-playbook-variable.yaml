@@ -1,12 +1,13 @@
 - name: play level variables 
- hosts: local
- conection: local
- vars:
+  hosts: local
+  conection: local
+  vars:
    COURSE: ansible
    DURATION: 10hrs
    TRANNER: pranathi
- -tasks:
-   name: printh the course 
-   ansible.builtin.debug:
+  tasks:
+  - name: printh the course 
+    ansible.builtin.debug:
      msg: "course name : {{ COURSE }},duration: {{ DURATION }},tranner: {{ TRANNER }}"
+
 
