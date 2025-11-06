@@ -3,7 +3,7 @@
   connection: local
   tasks:
   - name: print package  
-    ansible.builtin.debug:
+    ansible.builtin.package:
      name: "{{ item }}"
      state: present             #item is a default variable in loops
     loop:
