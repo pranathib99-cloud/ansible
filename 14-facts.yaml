@@ -1,6 +1,7 @@
 - name: check the facts
   hosts: localhost
   connection: local
+  become: yes  #elevate privilege to install packages
   tasks:
   - name: install nginx if RedHat
     ansible.builtin.dnf:   #dnf module is used for RedHat based systems
