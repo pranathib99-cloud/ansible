@@ -1,4 +1,4 @@
--name: multi variable playbook
+- name: multi variable playbook
  hosts: localhost
  conection: local
  vars:
