@@ -1,7 +1,6 @@
 - name: variable from file
   hosts: local
   connection: local 
-  
   tasks:
     - name: print courese info
       ansible.builtin.debug:
