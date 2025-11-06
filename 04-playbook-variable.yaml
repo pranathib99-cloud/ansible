@@ -5,8 +5,10 @@
   vars:
     COURSE: Ansible
     DURATION: 10HRS
-    Trainer: Sivakumar reddy
+    Trainer: pranathi
   tasks:
   - name: print the course info
     ansible.builtin.debug:
       msg: "Course Name is: {{ COURSE }}, Duratioin: {{ DURATION }}, Trainer: {{ Trainer }}"
+
+
