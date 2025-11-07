@@ -59,7 +59,7 @@
     ansible.builtin.debug:
      msg: " {{gmail | lower }} "
   
-  - name: validate ip addresses
-    ansible.builtin.debug:  "{{ ipaddres | ansible_validate_ip('ipv4') }}"
+  - name: validate ipv4 address valid are not 
+    ansible.builtin.debug:  "{{ ipaddres | ansible.units.ipv4 }}"
 
      
