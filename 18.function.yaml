@@ -35,15 +35,15 @@
 
 
      #convertiong a yaml file to json
-  - name: conver yaml and take into a json variable
+  - name: read yaml and take it into variable
     ansible.builtin.set_fact:
-     student_ymal: "{{ lookup('file','student.yaml') | from_yaml }}"
+      student_yaml: "{{ lookup('file', 'student.yaml') | from_yaml }}"
+
   - name: convert yaml into json
     ansible.builtin.debug:
       msg: "json: {{ student_yaml | to_json  }}"
 
-  
   - name: save json to file
     ansible.builtin.copy:
-     dest: student-data.json
-     content: "{{ stydent_yaml | to_nice_json }}"
+      dest: ./stundent-data.json
+      content: "{{ student_yaml | to_nice_json  }}"
