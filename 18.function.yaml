@@ -3,12 +3,20 @@
   connection: local
   become: yes
   vars: 
-   technology: " ansible , docker , kubernets" 
+   technology: " ansible , docker , kubernets"  # string variable
+   #dictionary = map
+   tags:
+    application: payment
+    enviroment: dev
   tasks: 
   - name: default variable
     ansible.builtin.debug:
      msg: "hello my dear {{ name | default('pranathi')}}"
-
+   # srings to list conversion
   - name: convert string to list 
     ansible.builtin.debug:
      msg: "technology list is: {{ technology | split(',')}}"
+
+  - name: convert dictionary to list 
+    ansible.builtin.debug:
+     msg: "tag are: {{tags | dict2items}}"
