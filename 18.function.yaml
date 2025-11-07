@@ -3,7 +3,7 @@
   connection: local
   become: yes
   vars:
-   ipaddres: "223.444.555.879.022"
+   ipaddress: "223.444.555.879.022"
    gmail: "B.PRANATHI41@GMAIL.COM" 
    name: " sai pranathi B"     #converting uppercase to lowercase using default filter
    technology: " ansible , docker , kubernets"  # string variable
@@ -60,6 +60,6 @@
      msg: " {{gmail | lower }} "
   
   - name: validate ipv4 address valid are not 
-    ansible.builtin.debug:  "{{ ipaddres | ansible.units.ipv4 }}"
+    ansible.builtin.debug:  "{{ ipaddress | ansible.units.ipv4 }}"
 
      
