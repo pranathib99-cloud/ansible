@@ -8,15 +8,27 @@
    tags:
     application: payment
     enviroment: dev
+    # 
+   listtags:
+   - key: application
+     value: payment
+   - key: enviroment
+     value: dev 
+
   tasks: 
   - name: default variable
     ansible.builtin.debug:
      msg: "hello my dear {{ name | default('pranathi')}}"
+
    # srings to list conversion
   - name: convert string to list 
     ansible.builtin.debug:
      msg: "technology list is: {{ technology | split(',')}}"
 
-  - name: convert dictionary to list 
+  - name: convert dictionary to list #dectionary to map conversion
     ansible.builtin.debug:
      msg: "tag are: {{tags | dict2items}}"
+
+  - name: conver list to mapping
+    ansible.builtin.debug:
+     msg: "list to mapping : {{ listtags | items2dict}}" 
