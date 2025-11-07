@@ -34,7 +34,7 @@
      msg: "list to mapping : {{ listtags | items2dict}}" 
 
 
-#convertiong a yaml file to json
+     #convertiong a yaml file to json
   - name: conver yaml to json
     ansible.builtin.set_fact:
      msg: "{{ lookup('file','student.yaml') | from_yaml | to_json }}"
