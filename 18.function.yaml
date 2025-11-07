@@ -2,7 +2,13 @@
   hosts: localhost
   connection: local
   become: yes
+  vars: 
+   technology: " ansible , docker , kubernets" 
   tasks: 
   - name: default variable
     ansible.builtin.debug:
      msg: "hello my dear {{ name | default('pranathi')}}"
+
+  - name: convert to string to list 
+    ansible.buildin.debug:
+     msg: "technology list is: {{ technology | split(',')}}"
