@@ -3,6 +3,7 @@
   connection: local
   become: yes
   vars:
+   ipaddress: "223.444.555.879.022"
    gmail: "B.PRANATHI41@GMAIL.COM" 
    name: " sai pranathi B"     #converting uppercase to lowercase using default filter
    technology: " ansible , docker , kubernets"  # string variable
@@ -57,3 +58,8 @@
   - name: covert lower case
     ansible.builtin.debug:
      msg: " {{gmail | lower }} "
+  
+  - name: validate ip addresses
+    ansible.builtin.debug:  "{{ ipaddress | ansible_validate_ip('ipv4') }}"
+
+     
