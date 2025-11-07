@@ -1,4 +1,4 @@
-- name: functions
+- name: functions      #functions are used to manipulate data types
   hosts: localhost
   connection: local
   become: yes
@@ -32,3 +32,9 @@
   - name: conver list to mapping
     ansible.builtin.debug:
      msg: "list to mapping : {{ listtags | items2dict}}" 
+
+
+#convertiong a yaml file to json
+  - name: conver yaml to json
+    anssible.builtin.set_fact:
+     msg: "{{ lookup('file','student.yaml') | from_yaml | to_json }}"
