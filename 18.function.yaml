@@ -9,6 +9,6 @@
     ansible.builtin.debug:
      msg: "hello my dear {{ name | default('pranathi')}}"
 
-  - name: convert to string to list 
-    ansible.buildin.debug:
+  - name: convert string to list 
+    ansible.builtin.debug:
      msg: "technology list is: {{ technology | split(',')}}"
