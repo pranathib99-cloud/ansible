@@ -2,7 +2,8 @@
   hosts: localhost
   connection: local
   become: yes
-  vars: 
+  vars:
+   gmail: "B.PRANATHI41@GMAIL.COM" 
    name: " sai pranathi B"     #converting uppercase to lowercase using default filter
    technology: " ansible , docker , kubernets"  # string variable
    #dictionary = map
@@ -52,3 +53,7 @@
   - name: convert uppercase
     ansible.builtin.debug:
      msg: " {{ name | upper }} "
+
+  - name: covert lower case
+    ansible.builtin.debug:
+     msg: " {{gmail | lower }} "
