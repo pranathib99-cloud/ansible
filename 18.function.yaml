@@ -60,6 +60,6 @@
      msg: " {{gmail | lower }} "
   
   - name: validate ipv4 address valid are not 
-    ansible.builtin.debug:  "{{ ipaddress | ansible.units.ipv4 }}"
+    ansible.builtin.debug:  "{{ ipaddress | ansible.utils.ipv4 }}"
 
      
