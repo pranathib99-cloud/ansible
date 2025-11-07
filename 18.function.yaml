@@ -1,8 +1,8 @@
-- name: function
+- name: functions
   hosts: localhost
   connection: local
-  became: yes
+  become: yes
   tasks: 
   - name: default variable
     ansible.builtin.debug:
-     masg: "hello my dear {{ name | default('pranathi')}}"
+     msg: "hello my dear {{ name | default('pranathi')}}"
