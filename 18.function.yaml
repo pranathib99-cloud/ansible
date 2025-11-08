@@ -69,5 +69,5 @@
 
   - name: print command_output
     ansible.builtin.debug:
-     msg: "command output is : " {{ coomand_output }} "
+     msg: "command output is : {{ coomand_output }} "
      
