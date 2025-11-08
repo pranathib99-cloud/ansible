@@ -1,0 +1,14 @@
+- name: eorror handing 
+  hosts: localhost
+  connection: local
+  become: yes
+
+  tasks:
+  - name: check user exist or not
+    ansible.builtin.command: id roboshop
+    register: user_output
+    ignore_errors: true
+
+  - name: print output
+    ansible.builtin.debug:
+     msg: "{{ user_output }} "
