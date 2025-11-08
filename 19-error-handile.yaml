@@ -6,13 +6,13 @@
   tasks:
   - name: check user exist or not
     ansible.builtin.command: id roboshop
-    register: user_output
+    register: user_output1
     ignore_errors: true
 
-  - name: print output
+  - name: print output1
     ansible.builtin.debug:
-     msg: "{{ user_output }} "
+     msg: "{{ user_output1 }} "
 
   - name: creat user
     ansible.builtin.debug:
-    when: user_output.rc !=0
+    when: user_output1.rc !=0
