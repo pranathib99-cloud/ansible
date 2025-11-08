@@ -12,3 +12,7 @@
   - name: print output
     ansible.builtin.debug:
      msg: "{{ user_output }} "
+
+  - name: creat user
+    ansible.builtin.debug:
+    when: user_output.rc !=0
