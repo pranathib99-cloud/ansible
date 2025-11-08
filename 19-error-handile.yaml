@@ -15,4 +15,4 @@
 
   - name: creat user
     ansible.builtin.debug:
-    when: user_output1.rc !=0
+    when: user_output1.rc != 0
