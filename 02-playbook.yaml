@@ -1,4 +1,4 @@
--name: play-01
+- name: play-01
 hosts: frontend
 tasks:
 - name: paly-01 task-1

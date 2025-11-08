@@ -5,7 +5,7 @@
 
   vars_prompt:  #prompting for variable values , will ask while executing the playbook ,
   - name: username #username variable ,run time prompt password
-    prompt: what is tour username
+    prompt: what is ur username
     private: false
 
   - name: password
